@@ -1,0 +1,101 @@
+{
+  "lang": "Français",
+  "nav": { "contact": "Contact", "menu": "Menu" },
+  "hero": {
+    "status": "Disponible pour des postes senior / full-stack",
+    "role": "Ingénieur logiciel senior",
+    "lede": "Je conçois des produits temps réel, full-stack et basés sur l'IA — salles de classe en streaming, tableaux blancs collaboratifs, outils 3D et fonctionnalités LLM — dans l'edtech, le SaaS et l'hôtellerie."
+  },
+  "eq": {
+    "hint": "déplacez le curseur · cliquez pour une impulsion",
+    "mic": "Réagir au son",
+    "listening": "À l'écoute · touchez pour arrêter",
+    "allow": "Autoriser le micro…",
+    "blocked": "Micro bloqué",
+    "unavailable": "Micro indisponible"
+  },
+  "sections": {
+    "experience": "Expérience",
+    "skills": "Compétences et outils",
+    "projects": "Projets",
+    "education": "Formation"
+  },
+  "stats": {
+    "years": "Années d'expérience",
+    "sessions": "Sessions mensuelles",
+    "hotels": "Hôtels mis à l'échelle",
+    "cost": "Coût de streaming réduit"
+  },
+  "companies": {
+    "bhanzu": { "role": "Software Engineer 3 · Full Stack", "summary": "J'ai conçu une salle de classe propriétaire en streaming, un tableau blanc collaboratif en temps réel, des fonctionnalités d'apprentissage basées sur le RAG et la plateforme microfrontend qui les soutient." },
+    "avataar": { "role": "Ingénieur logiciel", "summary": "J'ai créé des outils d'animation et de rendu 3D avec Three.js, avec un travail approfondi sur les performances du pipeline de rendu et du frontend." },
+    "stayflexi": { "role": "Ingénieur logiciel senior", "summary": "J'ai dirigé le moteur de réservation Bidflexi, livré un POS en React Native, mis à l'échelle les plateformes PMS et OTA à plus de 1 000 hôtels et migré la stack vers Django." }
+  },
+  "openCase": "Ouvrir l'étude de cas",
+  "skills": {
+    "frontend": "Frontend",
+    "backend": "Backend et API",
+    "ai": "IA et LLM",
+    "cloud": "Cloud et DevOps"
+  },
+  "projects": {
+    "shrohi": { "tagline": "Projet en solo · en production", "desc": "Un panneau d'administration e-commerce serverless pour une boutique, conçu et livré de bout en bout sur AWS." }
+  },
+  "education": {
+    "btech": { "degree": "B.Tech, Informatique", "school": "NIIT University" }
+  },
+  "contact": {
+    "eyebrow": "Ouvert aux postes senior, full-stack, temps réel et IA",
+    "title": "Construisons quelque chose qui sort en production.",
+    "sub": "Le moyen le plus rapide de me joindre est l'e-mail — je réponds généralement sous un jour."
+  },
+  "chat": {
+    "title": "Poser une question sur Ishan",
+    "open": "Demander à l'IA",
+    "greeting": "Bonjour ! Posez-moi n'importe quelle question sur le travail, la stack ou l'expérience d'Ishan.",
+    "placeholder": "Demandez n'importe quoi sur Ishan…",
+    "s1": "Que fait-il chez Bhanzu ?",
+    "s2": "Est-il ouvert à de nouveaux postes ?",
+    "s3": "Quelle est sa stack ?"
+  },
+  "palette": {
+    "open": "Commandes",
+    "placeholder": "Tapez une commande…",
+    "home": "Aller en haut",
+    "bhanzu": "Étude de cas · Bhanzu",
+    "avataar": "Étude de cas · Avataar.ai",
+    "stayflexi": "Étude de cas · Stayflexi",
+    "email": "Copier l'adresse e-mail",
+    "linkedin": "Ouvrir LinkedIn",
+    "github": "Ouvrir GitHub",
+    "chat": "Demander à l'assistant IA",
+    "hint": "↑↓ naviguer · entrée pour sélectionner · échap pour fermer"
+  },
+  "case": {
+    "back": "Toutes les expériences",
+    "next": "Poste suivant",
+    "plain": "En termes simples",
+    "bhanzu": {
+      "intro": "La classe en direct de Bhanzu gère plus de 50 000 sessions par mois. Voici l'infrastructure temps réel que j'ai construite en dessous.",
+      "streaming": { "title": "Une classe en direct qui a remplacé Zoom", "body": "J'ai remplacé Zoom par une classe propriétaire sur Amazon IVS — en capturant la vidéo dans le navigateur, en la compressant en niveaux de qualité adaptatifs et en la diffusant avec une latence inférieure à la seconde, réduisant le coût de streaming d'environ 50 % sur plus de 50 000 sessions mensuelles.", "note": "Comme une chaîne de télévision qui envoie automatiquement une image plus légère quand votre connexion est lente, pour que le cours ne se fige jamais." },
+      "whiteboard": { "title": "Tableau blanc collaboratif en temps réel", "body": "Chaque trait de stylo devient un petit événement diffusé via WebSocket et rejoué sur chaque écran, avec un journal d'événements permettant aux retardataires de reconstruire le tableau — augmentant l'engagement d'environ 30 %.", "note": "L'enseignant écrit une fois et cela apparaît sur l'écran de chaque élève au même instant." },
+      "backend": { "title": "Backend Python en couches", "body": "J'ai construit le backend en Python, Flask et DynamoDB sur une architecture stricte route → service → repository, avec une conception single-table orientée motifs d'accès pour des lectures rapides à grande échelle.", "note": "Chaque requête traverse des couches bien définies, ce qui garde le code facile à faire évoluer avec le produit." },
+      "rag": { "title": "Fonctionnalités IA ancrées par le RAG", "body": "Les résumés de cours, les quiz adaptatifs et les retours aux élèves sont ancrés par la Retrieval-Augmented Generation, afin que les réponses proviennent du vrai programme et non de la mémoire du modèle.", "note": "L'IA lit le vrai cours avant de répondre, donc elle n'invente rien." },
+      "microfrontend": { "title": "Plateforme microfrontend", "body": "Une shell hôte charge des modules distants déployés indépendamment — classe, devoirs, gamification — unifiés par un design system Storybook partagé, pour que les équipes livrent sans se gêner.", "note": "Des équipes différentes construisent des parties différentes de l'application et les publient à leur propre rythme." },
+      "quality": { "title": "Des tests qui protègent les mises en production", "body": "Des tests unitaires Vitest et des tests end-to-end Playwright s'exécutent en CI : une modification ne peut sortir que si elle passe — réduisant les incidents en production d'environ 50 %.", "note": "Des robots cliquent dans l'application avant chaque mise en production pour attraper les bugs avant les utilisateurs." }
+    },
+    "avataar": {
+      "intro": "Chez Avataar, j'ai construit les outils que les artistes utilisent pour créer des assets 3D de produits — et je les ai rendus rapides.",
+      "tooling": { "title": "Outils de création 3D", "body": "J'ai construit des outils d'animation et de rendu sur Three.js + React Three Fiber qui ont à peu près divisé par deux le temps de création des assets.", "note": "React décide à quoi doit ressembler la scène 3D ; Three.js et le GPU la dessinent." },
+      "perf": { "title": "Performances de rendu et frontend", "body": "Grâce à l'instanciation, la mémoïsation et le lazy loading, j'ai amélioré les performances de rendu et frontend de 40 à 50 %.", "note": "Des rendus moins nombreux et plus intelligents permettent à une scène 3D lourde de rester fluide." },
+      "components": { "title": "Architecture de composants réutilisables", "body": "J'ai composé l'éditeur à partir de petites primitives réutilisables plutôt que de dupliquer la logique entre les fonctionnalités.", "note": "On construit une fois de petites pièces façon Lego, puis on les assemble en fonctionnalités." }
+    },
+    "stayflexi": {
+      "intro": "Stayflexi gère les hôtels de bout en bout. J'ai travaillé sur son moteur de réservation, son POS et sa plateforme principale à grande échelle.",
+      "bidflexi": { "title": "Moteur de réservation Bidflexi", "body": "J'ai dirigé un moteur dynamique où les clients enchérissent sur les chambres face à des règles de prix en temps réel qui acceptent ou contre-proposent — ouvrant un nouveau canal B2C.", "note": "Les clients proposent leur prix et le système décide instantanément d'accepter ou non." },
+      "pos": { "title": "POS en React Native", "body": "J'ai conçu une application de point de vente multiplateforme à partir d'une seule base de code TypeScript, ouvrant le secteur de la restauration sans équipes iOS et Android séparées.", "note": "Une seule base de code devient à la fois l'application iPhone et l'application Android." },
+      "scale": { "title": "Mis à l'échelle à plus de 1 000 hôtels", "body": "J'ai contribué à mettre à l'échelle les plateformes PMS et OTA à plus de 1 000 hôtels, en gardant l'inventaire synchronisé sur les canaux de réservation.", "note": "Un seul tableau de bord garde les chambres et les prix de mille hôtels corrects partout où ils sont vendus." },
+      "migration": { "title": "Migration de Jython vers Django", "body": "J'ai migré la plateforme de l'ancien Jython vers Django et découpé le code du frontend pour des chargements environ 75 % plus rapides.", "note": "J'ai remplacé un moteur vieillissant par un moderne — sans arrêter la voiture." }
+    }
+  }
+}

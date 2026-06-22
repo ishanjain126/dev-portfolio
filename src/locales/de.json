@@ -1,0 +1,101 @@
+{
+  "lang": "Deutsch",
+  "nav": { "contact": "Kontakt", "menu": "Menü" },
+  "hero": {
+    "status": "Verfügbar für Senior- / Full-Stack-Rollen",
+    "role": "Senior Software Engineer",
+    "lede": "Ich entwickle Echtzeit-, Full-Stack- und KI-gestützte Produkte — Livestream-Klassenzimmer, kollaborative Whiteboards, 3D-Tools und LLM-Funktionen — in EdTech, SaaS und Hospitality."
+  },
+  "eq": {
+    "hint": "bewege den Cursor · klicke für einen Impuls",
+    "mic": "Auf Klang reagieren",
+    "listening": "Höre zu · zum Stoppen tippen",
+    "allow": "Mikrofon erlauben…",
+    "blocked": "Mikrofon blockiert",
+    "unavailable": "Mikrofon nicht verfügbar"
+  },
+  "sections": {
+    "experience": "Erfahrung",
+    "skills": "Fähigkeiten und Tools",
+    "projects": "Projekte",
+    "education": "Ausbildung"
+  },
+  "stats": {
+    "years": "Jahre Erfahrung",
+    "sessions": "Sitzungen pro Monat",
+    "hotels": "Skalierte Hotels",
+    "cost": "Streaming-Kosten gesenkt"
+  },
+  "companies": {
+    "bhanzu": { "role": "Software Engineer 3 · Full Stack", "summary": "Ich habe ein proprietäres Livestream-Klassenzimmer, ein kollaboratives Echtzeit-Whiteboard, RAG-gestützte Lernfunktionen und die zugrunde liegende Microfrontend-Plattform konzipiert." },
+    "avataar": { "role": "Software Engineer", "summary": "Ich habe 3D-Animations- und Rendering-Tools mit Three.js entwickelt, mit umfassender Optimierung von Render-Pipeline und Frontend-Performance." },
+    "stayflexi": { "role": "Senior Software Engineer", "summary": "Ich habe die Bidflexi-Buchungsmaschine geleitet, ein React-Native-POS ausgeliefert, PMS- und OTA-Plattformen auf über 1.000 Hotels skaliert und den Stack auf Django migriert." }
+  },
+  "openCase": "Fallstudie öffnen",
+  "skills": {
+    "frontend": "Frontend",
+    "backend": "Backend und APIs",
+    "ai": "KI und LLM",
+    "cloud": "Cloud und DevOps"
+  },
+  "projects": {
+    "shrohi": { "tagline": "Solo-Projekt · live in Produktion", "desc": "Ein serverloses E-Commerce-Adminpanel für eine Boutique, vollständig auf AWS gebaut und ausgeliefert." }
+  },
+  "education": {
+    "btech": { "degree": "B.Tech, Informatik", "school": "NIIT University" }
+  },
+  "contact": {
+    "eyebrow": "Offen für Senior-, Full-Stack-, Echtzeit- und KI-Rollen",
+    "title": "Lass uns etwas bauen, das in Produktion geht.",
+    "sub": "Am schnellsten erreichst du mich per E-Mail — ich antworte meist innerhalb eines Tages."
+  },
+  "chat": {
+    "title": "Frag über Ishan",
+    "open": "KI fragen",
+    "greeting": "Hallo! Frag mich alles über Ishans Arbeit, seinen Stack oder seine Erfahrung.",
+    "placeholder": "Frag alles über Ishan…",
+    "s1": "Was macht er bei Bhanzu?",
+    "s2": "Ist er offen für neue Rollen?",
+    "s3": "Was ist sein Stack?"
+  },
+  "palette": {
+    "open": "Befehle",
+    "placeholder": "Befehl eingeben…",
+    "home": "Nach oben",
+    "bhanzu": "Fallstudie · Bhanzu",
+    "avataar": "Fallstudie · Avataar.ai",
+    "stayflexi": "Fallstudie · Stayflexi",
+    "email": "E-Mail-Adresse kopieren",
+    "linkedin": "LinkedIn öffnen",
+    "github": "GitHub öffnen",
+    "chat": "KI-Assistenten fragen",
+    "hint": "↑↓ navigieren · Enter zum Auswählen · Esc zum Schließen"
+  },
+  "case": {
+    "back": "Alle Erfahrungen",
+    "next": "Nächste Rolle",
+    "plain": "Einfach erklärt",
+    "bhanzu": {
+      "intro": "Bhanzus Live-Klassenzimmer verarbeitet über 50.000 Sitzungen pro Monat. Hier ist die Echtzeit-Infrastruktur, die ich darunter gebaut habe.",
+      "streaming": { "title": "Live-Klassenzimmer als Zoom-Ersatz", "body": "Ich habe Zoom durch ein proprietäres Klassenzimmer auf Amazon IVS ersetzt — das Video wird im Browser erfasst, in adaptive Qualitätsstufen komprimiert und mit Latenz unter einer Sekunde ausgeliefert, was die Streaming-Kosten über mehr als 50.000 monatliche Sitzungen um etwa 50 % senkt.", "note": "Wie ein Fernsehsender, der bei langsamer Verbindung automatisch ein leichteres Bild sendet, damit der Unterricht nie einfriert." },
+      "whiteboard": { "title": "Kollaboratives Echtzeit-Whiteboard", "body": "Jeder Stiftstrich wird zu einem kleinen Ereignis, das über WebSockets gesendet und auf jedem Bildschirm wiedergegeben wird, mit einem Ereignisprotokoll, damit Nachzügler das Board rekonstruieren können — was das Engagement um etwa 30 % steigert.", "note": "Die Lehrkraft schreibt einmal, und es erscheint im selben Moment auf jedem Schülerbildschirm." },
+      "backend": { "title": "Geschichtetes Python-Backend", "body": "Ich habe das Backend in Python, Flask und DynamoDB auf einer strikten route → service → repository-Architektur gebaut, mit zugriffsmuster-orientiertem Single-Table-Design für schnelle Lesevorgänge im großen Maßstab.", "note": "Jede Anfrage durchläuft saubere Schichten, sodass der Code leicht änderbar bleibt, während das Produkt wächst." },
+      "rag": { "title": "RAG-gestützte KI-Funktionen", "body": "Lektionszusammenfassungen, adaptive Quizze und Schüler-Feedback werden mit Retrieval-Augmented Generation verankert, sodass Antworten aus dem echten Lehrplan stammen statt aus dem Gedächtnis des Modells.", "note": "Die KI liest die echte Lektion, bevor sie antwortet, damit sie nichts erfindet." },
+      "microfrontend": { "title": "Microfrontend-Plattform", "body": "Eine Host-Shell lädt unabhängig deployte Remotes — Klassenzimmer, Aufgaben, Gamification — vereint durch ein gemeinsames Storybook-Designsystem, sodass Teams ohne Konflikte ausliefern.", "note": "Verschiedene Teams bauen verschiedene Teile der App und veröffentlichen sie in ihrem eigenen Tempo." },
+      "quality": { "title": "Tests, die Releases absichern", "body": "Vitest-Unit-Tests und Playwright-End-to-End-Tests laufen in der CI, sodass eine Änderung nur ausgeliefert wird, wenn sie besteht — was Produktionsfehler um etwa 50 % reduziert.", "note": "Roboter klicken vor jedem Release durch die App, um Fehler vor den Nutzern zu finden." }
+    },
+    "avataar": {
+      "intro": "Bei Avataar habe ich die Werkzeuge gebaut, mit denen Artists 3D-Produkt-Assets erstellen — und sie schnell gemacht.",
+      "tooling": { "title": "3D-Erstellungswerkzeuge", "body": "Ich habe Animations- und Rendering-Tools auf Three.js + React Three Fiber gebaut, die die Asset-Erstellungszeit etwa halbiert haben.", "note": "React entscheidet, wie die 3D-Szene aussehen soll; Three.js und die GPU zeichnen sie." },
+      "perf": { "title": "Render- und Frontend-Performance", "body": "Durch Instancing, Memoization und Lazy Loading habe ich die Render- und Frontend-Performance um 40–50 % verbessert.", "note": "Weniger, aber klügere Zeichenvorgänge sorgen dafür, dass eine schwere 3D-Szene flüssig bleibt." },
+      "components": { "title": "Wiederverwendbare Komponentenarchitektur", "body": "Ich habe den Editor aus kleinen wiederverwendbaren Primitiven zusammengesetzt, statt Logik über Funktionen hinweg zu duplizieren.", "note": "Man baut einmal kleine Lego-artige Teile und steckt sie dann zu Funktionen zusammen." }
+    },
+    "stayflexi": {
+      "intro": "Stayflexi betreibt Hotels von A bis Z. Ich habe an der Buchungsmaschine, am POS und an der Kernplattform im großen Maßstab gearbeitet.",
+      "bidflexi": { "title": "Bidflexi-Buchungsmaschine", "body": "Ich habe eine dynamische Engine geleitet, bei der Gäste auf Zimmer bieten — gegen Echtzeit-Preisregeln, die annehmen oder ein Gegenangebot machen — und so einen neuen B2C-Kanal eröffnen.", "note": "Gäste nennen ihren Preis, und das System entscheidet sofort, ob es zustimmt." },
+      "pos": { "title": "React-Native-POS", "body": "Ich habe eine plattformübergreifende Kassen-App aus einer einzigen TypeScript-Codebasis konzipiert und damit den Gastronomiebereich ohne separate iOS- und Android-Teams erschlossen.", "note": "Eine Codebasis wird sowohl zur iPhone- als auch zur Android-App." },
+      "scale": { "title": "Auf über 1.000 Hotels skaliert", "body": "Ich habe geholfen, die PMS- und OTA-Plattformen auf über 1.000 Hotels zu skalieren und den Bestand über alle Buchungskanäle synchron zu halten.", "note": "Ein einziges Dashboard hält Zimmer und Preise von tausend Hotels überall korrekt, wo sie verkauft werden." },
+      "migration": { "title": "Migration von Jython zu Django", "body": "Ich habe die Plattform vom alten Jython auf Django migriert und das Frontend per Code-Splitting für etwa 75 % schnellere Ladezeiten optimiert.", "note": "Ich habe einen alternden Motor durch einen modernen ersetzt — ohne das Auto anzuhalten." }
+    }
+  }
+}

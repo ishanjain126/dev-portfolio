@@ -1,0 +1,160 @@
+{
+  "contact": {
+    "email": "jain.ishan126@gmail.com",
+    "phone": "+91 99826 59449",
+    "phoneHref": "tel:+919982659449",
+    "linkedin": "https://www.linkedin.com/in/ishan-jain-b10a77147/",
+    "github": "https://github.com/ishanjain126",
+    "location": "Bengaluru, India"
+  },
+  "stats": [
+    { "id": "years", "value": 5, "suffix": "+" },
+    { "id": "sessions", "value": 50, "suffix": "K+" },
+    { "id": "hotels", "value": 1, "suffix": "K+" },
+    { "id": "cost", "value": 50, "suffix": "%" }
+  ],
+  "companies": [
+    {
+      "id": "bhanzu",
+      "icon": "Boxes",
+      "meta": "Apr 2025 — Present · edtech",
+      "pills": ["Amazon IVS", "WebSockets", "RAG", "Flask", "DynamoDB", "Microfrontends"],
+      "accomplishments": [
+        {
+          "id": "streaming", "icon": "Radio", "metric": "50,000+ sessions · 50% cost cut",
+          "flow": [
+            { "icon": "Video", "t": "Your camera", "s": "captured in-browser", "tone": "" },
+            { "icon": "Cloud", "t": "Amazon IVS", "s": "compress · ABR", "tone": "hot" },
+            { "icon": "Zap", "t": "Edge / CDN", "s": "deliver fast", "tone": "" },
+            { "icon": "Users", "t": "Students", "s": "auto-quality", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "whiteboard", "icon": "PenTool", "metric": "~30% engagement lift",
+          "flow": [
+            { "icon": "PenTool", "t": "Your machine", "s": "you draw a stroke", "tone": "" },
+            { "icon": "Webhook", "t": "WebSocket server", "s": "relays the message", "tone": "hot" },
+            { "icon": "Users", "t": "Other machine", "s": "replays the stroke", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "backend", "icon": "Layers", "metric": "workflows · assignments · gamification",
+          "flow": [
+            { "icon": "AppWindow", "t": "Route", "s": "auth · validation", "tone": "" },
+            { "icon": "Settings", "t": "Service", "s": "business rules", "tone": "" },
+            { "icon": "Database", "t": "Repository", "s": "DynamoDB", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "rag", "icon": "Sparkles", "metric": "grounded, not hallucinated",
+          "flow": [
+            { "icon": "User", "t": "Question", "s": "from student", "tone": "" },
+            { "icon": "Database", "t": "Find lessons", "s": "best matches", "tone": "cool" },
+            { "icon": "FileText", "t": "Build prompt", "s": "lessons + question", "tone": "" },
+            { "icon": "Sparkles", "t": "AI answer", "s": "grounded", "tone": "hot" }
+          ]
+        },
+        {
+          "id": "microfrontend", "icon": "Puzzle", "metric": "independent deploys · one design system",
+          "flow": [
+            { "icon": "AppWindow", "t": "Host shell", "s": "routing · auth", "tone": "hot" },
+            { "icon": "Puzzle", "t": "Remotes", "s": "own CI/CD", "tone": "" },
+            { "icon": "Layers", "t": "Design system", "s": "shared", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "quality", "icon": "FlaskConical", "metric": "~50% fewer production issues",
+          "flow": [
+            { "icon": "Code2", "t": "Commit", "s": "a change", "tone": "" },
+            { "icon": "FlaskConical", "t": "Tests", "s": "Vitest · Playwright", "tone": "" },
+            { "icon": "Check", "t": "Deploy", "s": "if all green", "tone": "hot" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avataar",
+      "icon": "Box",
+      "meta": "Jul 2024 — Mar 2025 · enterprise 3D",
+      "pills": ["Three.js", "React Fiber", "WebGL", "Zustand"],
+      "accomplishments": [
+        {
+          "id": "tooling", "icon": "Box", "metric": "~50% faster asset creation",
+          "flow": [
+            { "icon": "Code2", "t": "React / JSX", "s": "scene state", "tone": "" },
+            { "icon": "Box", "t": "Three.js", "s": "scene graph", "tone": "cool" },
+            { "icon": "Cpu", "t": "GPU", "s": "draws the frame", "tone": "hot" }
+          ]
+        },
+        {
+          "id": "perf", "icon": "Gauge", "metric": "40–50% performance & scalability",
+          "flow": [
+            { "icon": "Layers", "t": "Instancing", "s": "batch draws", "tone": "" },
+            { "icon": "Gauge", "t": "Memoize", "s": "fewer re-renders", "tone": "cool" },
+            { "icon": "Zap", "t": "Lazy load", "s": "stream meshes", "tone": "hot" }
+          ]
+        },
+        {
+          "id": "components", "icon": "Puzzle", "metric": "compose, don't duplicate",
+          "flow": [
+            { "icon": "Settings", "t": "Primitives", "s": "controls · materials", "tone": "" },
+            { "icon": "Box", "t": "Viewport", "s": "composed", "tone": "cool" },
+            { "icon": "AppWindow", "t": "Editor", "s": "feature", "tone": "hot" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stayflexi",
+      "icon": "Building2",
+      "meta": "Aug 2021 — Jun 2024 · YC-backed SaaS",
+      "pills": ["React Native", "Django", "MySQL", "Scale"],
+      "accomplishments": [
+        {
+          "id": "bidflexi", "icon": "Tag", "metric": "higher B2C conversion",
+          "flow": [
+            { "icon": "Tag", "t": "Guest bid", "s": "offers a price", "tone": "" },
+            { "icon": "Settings", "t": "Pricing engine", "s": "rules · inventory", "tone": "" },
+            { "icon": "Check", "t": "Booking", "s": "confirmed", "tone": "hot" }
+          ]
+        },
+        {
+          "id": "pos", "icon": "Smartphone", "metric": "one codebase · new revenue",
+          "flow": [
+            { "icon": "Code2", "t": "React Native", "s": "shared code", "tone": "hot" },
+            { "icon": "Smartphone", "t": "iOS", "s": "native UI", "tone": "" },
+            { "icon": "Smartphone", "t": "Android", "s": "native UI", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "scale", "icon": "Building2", "metric": "1,000+ hotels · high availability",
+          "flow": [
+            { "icon": "Building2", "t": "1,000+ hotels", "s": "inventory in", "tone": "" },
+            { "icon": "Server", "t": "PMS platform", "s": "the hub", "tone": "hot" },
+            { "icon": "Globe", "t": "OTAs", "s": "synced out", "tone": "cool" }
+          ]
+        },
+        {
+          "id": "migration", "icon": "ArrowLeftRight", "metric": "~75% faster frontend",
+          "flow": [
+            { "icon": "Code2", "t": "Jython", "s": "legacy", "tone": "" },
+            { "icon": "ArrowLeftRight", "t": "migrate", "s": "", "tone": "hot" },
+            { "icon": "Server", "t": "Django", "s": "modular", "tone": "cool" }
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    { "id": "frontend", "tags": ["React.js", "TypeScript", "React Native", "Zustand", "Redux", "Three.js", "Canvas API", "Microfrontends", "TailwindCSS", "Storybook"] },
+    { "id": "backend", "tags": ["Python", "Flask", "FastAPI", "Django", "REST APIs", "Microservices", "Event-Driven", "Serverless"] },
+    { "id": "ai", "tags": ["LLM Integration", "OpenAI API", "Prompt Engineering", "RAG Pipelines"] },
+    { "id": "cloud", "tags": ["AWS Lambda", "API Gateway", "Amazon IVS", "DynamoDB", "S3", "Amplify", "CI/CD", "Playwright", "Vitest"] }
+  ],
+  "projects": [
+    { "id": "shrohi", "url": "https://shrohione.in", "label": "shrohione.in", "stack": ["React", "Zustand", "TailwindCSS", "Lambda", "API Gateway", "DynamoDB"] }
+  ],
+  "education": [
+    { "id": "btech", "period": "2017 — 2021", "score": "CGPA 8.0" }
+  ]
+}
