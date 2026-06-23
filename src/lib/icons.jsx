@@ -3,7 +3,8 @@ import {
   AppWindow, Settings, Database, FileText, Sparkles, Layers, Puzzle, FlaskConical,
   Check, Code2, Cpu, Gauge, Tag, Smartphone, Server, Globe, ArrowLeftRight,
   Mail, Phone, Linkedin, Github, MessageCircle, X, Send, Command, Search,
-  ChevronDown, Mic, ArrowRight, Languages
+  ChevronDown, Mic, ArrowRight, Languages, Eraser,
+  Presentation, ShieldCheck, Sun, Maximize2, TrendingUp, TrendingDown, Diamond
 } from 'lucide-react'
 
 const map = {
@@ -11,7 +12,8 @@ const map = {
   AppWindow, Settings, Database, FileText, Sparkles, Layers, Puzzle, FlaskConical,
   Check, Code2, Cpu, Gauge, Tag, Smartphone, Server, Globe, ArrowLeftRight,
   Mail, Phone, Linkedin, Github, MessageCircle, X, Send, Command, Search,
-  ChevronDown, Mic, ArrowRight, Languages
+  ChevronDown, Mic, ArrowRight, Languages, Eraser,
+  Presentation, ShieldCheck, Sun, Maximize2, TrendingUp, TrendingDown, Diamond
 }
 
 export default function Icon({ name, ...props }) {

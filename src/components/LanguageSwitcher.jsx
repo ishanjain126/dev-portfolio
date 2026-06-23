@@ -25,18 +25,27 @@ export default function LanguageSwitcher() {
       </button>
       {open && (
         <ul className="lang-menu" role="listbox">
-          {LANGS.map((l) => (
-            <li key={l.code}>
-              <button
-                className={'lang-item' + (l.code === i18n.language ? ' active' : '')}
-                onClick={() => { i18n.changeLanguage(l.code); setOpen(false) }}
-                role="option"
-                aria-selected={l.code === i18n.language}
-              >
-                {l.label}
-              </button>
-            </li>
-          ))}
+          {LANGS.map((l) => {
+            const active = l.code === i18n.language
+            return (
+              <li key={l.code}>
+                <button
+                  className={'lang-item' + (active ? ' active' : '')}
+                  onClick={() => {
+                    // a chosen language is a preference — it persists and beats auto/IP detection
+                    try { localStorage.setItem('langPref', l.code) } catch (e) { /* ignore */ }
+                    i18n.changeLanguage(l.code)
+                    setOpen(false)
+                  }}
+                  role="option"
+                  aria-selected={active}
+                >
+                  <span>{l.label}</span>
+                  {active && <Icon name="Check" size={14} />}
+                </button>
+              </li>
+            )
+          })}
         </ul>
       )}
     </div>

@@ -2,9 +2,10 @@
   "lang": "Français",
   "nav": { "contact": "Contact", "menu": "Menu" },
   "hero": {
-    "status": "Disponible pour des postes senior / full-stack",
+    "status": "Systèmes temps réel · actuellement @ Bhanzu · Bengaluru, IN",
     "role": "Ingénieur logiciel senior",
-    "lede": "Je conçois des produits temps réel, full-stack et basés sur l'IA — salles de classe en streaming, tableaux blancs collaboratifs, outils 3D et fonctionnalités LLM — dans l'edtech, le SaaS et l'hôtellerie."
+    "roleSuffix": "Systèmes React · full-stack · temps réel et IA",
+    "lede": "Je construis ce que personne ne remarque jusqu'à ce que ça casse : salles de classe en streaming, tableaux blancs collaboratifs, outils 3D et fonctionnalités basées sur les LLM — dans l'edtech, le SaaS et l'hôtellerie, depuis plus de 5 ans."
   },
   "eq": {
     "hint": "déplacez le curseur · cliquez pour une impulsion",
@@ -13,6 +14,28 @@
     "allow": "Autoriser le micro…",
     "blocked": "Micro bloqué",
     "unavailable": "Micro indisponible"
+  },
+  "wb": {
+    "you": "Votre tableau",
+    "peer": "Tableau du pair",
+    "hint": "Dessinez à gauche — c'est reproduit sur le pair après un court saut réseau",
+    "clear": "Effacer",
+    "how": "Envie de savoir comment ça marchait ?"
+  },
+  "ws": {
+    "title": "Qu'est-ce qu'un WebSocket — et comment se connecte-t-il ?",
+    "lead": "Une requête web normale est en un seul aller-retour : le navigateur demande, le serveur répond, la ligne se ferme. Un WebSocket garde la ligne ouverte dans les deux sens, si bien que chaque côté peut envoyer un message à tout moment sans redemander.",
+    "step1": "Votre navigateur envoie une requête HTTPS normale demandant de faire évoluer (upgrade) la connexion en WebSocket.",
+    "step2": "Le serveur accepte, le protocole change et la connexion reste ouverte au lieu de se fermer.",
+    "step3": "Désormais chaque côté peut pousser des messages instantanément — un trait de stylo arrive sur chaque écran en quelques millisecondes.",
+    "flow": {
+      "you": "Votre machine",
+      "youSub": "vous dessinez un trait",
+      "server": "Serveur WebSocket",
+      "serverSub": "relaie le message",
+      "other": "Autre machine",
+      "otherSub": "rejoue le trait"
+    }
   },
   "sections": {
     "experience": "Expérience",
@@ -25,6 +48,18 @@
     "sessions": "Sessions mensuelles",
     "hotels": "Hôtels mis à l'échelle",
     "cost": "Coût de streaming réduit"
+  },
+  "sys": {
+    "title": "Vérification système",
+    "desc": "Curieux de savoir comment cette page performe ? Soulevez le capot — des métriques d'exécution en direct, mesurées dans votre navigateur.",
+    "cta": "Lancer la vérification",
+    "foot": "mesuré côté client · rien ne quitte votre navigateur",
+    "render": { "k": "Chemin de rendu", "v": "React 18 · concurrent", "d": "Les composants arrivent en streaming et s'hydratent sans bloquer le thread principal." },
+    "memory": { "k": "Tas JS", "v": "léger", "d": "Les chunks lazy et des démontages propres gardent la mémoire stable entre les routes." },
+    "network": { "k": "Transfert", "v": "code-split", "d": "Three.js et le widget de chat se chargent dans leurs propres chunks, à la demande." },
+    "paint": { "k": "Paint", "v": "aucun layout shift", "d": "Des dimensions fixes et un pixel ratio plafonné évitent le reflow et le CLS." },
+    "frame": { "k": "Fréquence d'images", "v": "— fps", "d": "Les animations tournent sur requestAnimationFrame et s'arrêtent en reduced-motion." },
+    "a11y": { "k": "Accessibilité", "v": "souci de l'AA", "d": "États de focus, reduced-motion et RTL complet sont natifs ici." }
   },
   "companies": {
     "bhanzu": { "role": "Software Engineer 3 · Full Stack", "summary": "J'ai conçu une salle de classe propriétaire en streaming, un tableau blanc collaboratif en temps réel, des fonctionnalités d'apprentissage basées sur le RAG et la plateforme microfrontend qui les soutient." },
@@ -39,7 +74,7 @@
     "cloud": "Cloud et DevOps"
   },
   "projects": {
-    "shrohi": { "tagline": "Projet en solo · en production", "desc": "Un panneau d'administration e-commerce serverless pour une boutique, conçu et livré de bout en bout sur AWS." }
+    "shrohi": { "tagline": "Mon SaaS pour boutiques · en prod et en croissance", "desc": "Shrohi est la plateforme tout-en-un que je construis pour les boutiques de mode — commandes, clients, paiements et workflows entièrement personnalisés au même endroit, pour qu'une petite entreprise pilote toute son activité textile depuis un seul tableau de bord. Conçue, développée et livrée en solo sur AWS serverless ; déjà en production avec un client payant, et d'autres en cours d'onboarding." }
   },
   "education": {
     "btech": { "degree": "B.Tech, Informatique", "school": "NIIT University" }
@@ -50,9 +85,12 @@
     "sub": "Le moyen le plus rapide de me joindre est l'e-mail — je réponds généralement sous un jour."
   },
   "chat": {
-    "title": "Poser une question sur Ishan",
-    "open": "Demander à l'IA",
+    "title": "Nexus",
+    "open": "Demander à Nexus",
     "greeting": "Bonjour ! Posez-moi n'importe quelle question sur le travail, la stack ou l'expérience d'Ishan.",
+    "online": "en ligne · propulsé par Claude",
+    "offline": "hors ligne · réponses depuis les données locales",
+    "fallback": "Je peux vous parler du travail d'Ishan chez Bhanzu, Avataar.ai ou Stayflexi, de son SaaS Shrohi, de sa stack ou de comment le joindre — essayez l'une de ces pistes, ou écrivez à jain.ishan126@gmail.com.",
     "placeholder": "Demandez n'importe quoi sur Ishan…",
     "s1": "Que fait-il chez Bhanzu ?",
     "s2": "Est-il ouvert à de nouveaux postes ?",
@@ -77,25 +115,25 @@
     "plain": "En termes simples",
     "bhanzu": {
       "intro": "La classe en direct de Bhanzu gère plus de 50 000 sessions par mois. Voici l'infrastructure temps réel que j'ai construite en dessous.",
-      "streaming": { "title": "Une classe en direct qui a remplacé Zoom", "body": "J'ai remplacé Zoom par une classe propriétaire sur Amazon IVS — en capturant la vidéo dans le navigateur, en la compressant en niveaux de qualité adaptatifs et en la diffusant avec une latence inférieure à la seconde, réduisant le coût de streaming d'environ 50 % sur plus de 50 000 sessions mensuelles.", "note": "Comme une chaîne de télévision qui envoie automatiquement une image plus légère quand votre connexion est lente, pour que le cours ne se fige jamais." },
-      "whiteboard": { "title": "Tableau blanc collaboratif en temps réel", "body": "Chaque trait de stylo devient un petit événement diffusé via WebSocket et rejoué sur chaque écran, avec un journal d'événements permettant aux retardataires de reconstruire le tableau — augmentant l'engagement d'environ 30 %.", "note": "L'enseignant écrit une fois et cela apparaît sur l'écran de chaque élève au même instant." },
-      "backend": { "title": "Backend Python en couches", "body": "J'ai construit le backend en Python, Flask et DynamoDB sur une architecture stricte route → service → repository, avec une conception single-table orientée motifs d'accès pour des lectures rapides à grande échelle.", "note": "Chaque requête traverse des couches bien définies, ce qui garde le code facile à faire évoluer avec le produit." },
-      "rag": { "title": "Fonctionnalités IA ancrées par le RAG", "body": "Les résumés de cours, les quiz adaptatifs et les retours aux élèves sont ancrés par la Retrieval-Augmented Generation, afin que les réponses proviennent du vrai programme et non de la mémoire du modèle.", "note": "L'IA lit le vrai cours avant de répondre, donc elle n'invente rien." },
-      "microfrontend": { "title": "Plateforme microfrontend", "body": "Une shell hôte charge des modules distants déployés indépendamment — classe, devoirs, gamification — unifiés par un design system Storybook partagé, pour que les équipes livrent sans se gêner.", "note": "Des équipes différentes construisent des parties différentes de l'application et les publient à leur propre rythme." },
-      "quality": { "title": "Des tests qui protègent les mises en production", "body": "Des tests unitaires Vitest et des tests end-to-end Playwright s'exécutent en CI : une modification ne peut sortir que si elle passe — réduisant les incidents en production d'environ 50 %.", "note": "Des robots cliquent dans l'application avant chaque mise en production pour attraper les bugs avant les utilisateurs." }
+      "streaming": { "cat": "Média temps réel", "diagram": "Pipeline de streaming en direct", "title": "Une plateforme de streaming en direct propriétaire qui a remplacé Zoom", "body": "J'ai conçu la classe en direct sur **Amazon IVS**, en abandonnant les licences Zoom par poste au profit d'un streaming basé sur l'usage que nous maîtrisons de bout en bout. La caméra et le micro du formateur sont capturés dans le navigateur, transcodés par IVS en une échelle de débits adaptatifs, et diffusés via l'edge avec une latence inférieure à la seconde.\n\nLe plus difficile se joue aux extrémités : connexions par token, reconnexion avec backoff et **débit adaptatif** pour que les connexions faibles se dégradent en douceur. Le gain : **~50 % de dépenses de streaming en moins**.", "note": "La vidéo de l'enseignant est capturée dans le navigateur, compressée en plusieurs niveaux de qualité et envoyée via le réseau d'Amazon — ainsi chaque élève reçoit automatiquement la meilleure version que sa connexion peut gérer. Comme Netflix, mais en direct." },
+      "whiteboard": { "cat": "Collaboration temps réel", "diagram": "Synchronisation événementielle via WebSockets", "title": "Un tableau blanc collaboratif qui reste synchronisé, trait par trait", "body": "J'ai construit un tableau blanc multi-utilisateurs sur le **Canvas API** où chaque trait devient un **événement diffusé via WebSockets**. Un hub central distribue chaque événement à tous les pairs, qui le réappliquent — si bien que tout le monde voit le même tableau instantanément.\n\nIl est modélisé comme un **flux d'événements**, pas comme une image partagée : les événements sont journalisés, donc un retardataire rejoue l'historique pour reconstruire le tableau exact. L'interactivité a généré **~30 % d'engagement en plus**.", "note": "Quand l'enseignant dessine, cette seule action est envoyée comme un petit message à un hub central, qui la recopie instantanément sur le tableau de chaque élève. Chaque action est aussi sauvegardée — ainsi quiconque arrive en retard voit le tableau complet se reconstruire de lui-même." },
+      "backend": { "cat": "Backend", "diagram": "Chemin de requête · architecture en couches", "title": "Services backend en couches sur Python, Flask et DynamoDB", "body": "Je suis responsable de services backend sur une **architecture strictement en couches** — route, puis service, puis repository — pour que la logique reste testable et que la couche de données puisse être remplacée sans toucher aux règles au-dessus.\n\nLes données vivent dans **DynamoDB avec une conception single-table orientée motifs d'accès**, gardant des lectures de l'ordre de la milliseconde à grande échelle. Par-dessus tournent des API REST pour les parcours d'élèves, les devoirs et un moteur de gamification.", "note": "Une requête traverse des couches propres et séparées — l'une vérifie qui vous êtes, l'une exécute les règles, l'une dialogue avec la base de données. Comme elles sont séparées, n'importe quelle couche peut être modifiée ou testée sans casser les autres." },
+      "rag": { "cat": "IA appliquée", "diagram": "Pipeline RAG", "title": "Des fonctionnalités LLM ancrées dans le vrai programme grâce au RAG", "body": "J'ai relié des LLM à la boucle d'apprentissage — **résumer les leçons**, **générer des quiz adaptatifs** et donner un **retour ciblé** — avec un prompt engineering soigné.\n\nCe qui le rend fiable, c'est le **Retrieval-Augmented Generation**. Le contenu des cours est indexé dans un vector store ; au moment de la question, les passages pertinents sont récupérés et composés dans le prompt, si bien que le modèle répond **à partir du vrai matériel**, et non de sa mémoire.", "note": "Plutôt que de faire confiance à l'IA pour se souvenir du programme, on trouve d'abord les pages de leçon exactes qui correspondent à la question, on ne lui remet que celles-là, et on lui demande de répondre à partir d'elles — pour que les réponses restent exactes et pertinentes." },
+      "microfrontend": { "cat": "Architecture frontend", "diagram": "Shell hôte · module federation", "title": "Une plateforme microfrontend que les équipes peuvent livrer indépendamment", "body": "J'ai structuré le frontend en **microfrontends** : un shell hôte qui possède le routage, la mise en page et l'authentification, chargeant à l'exécution des modules distants construits indépendamment via **module federation**. La classe, les devoirs et la gamification vivent chacun dans leur propre repo avec leur propre CI/CD.\n\nIls donnent toujours l'impression d'un seul produit car ils partagent un même **design system** et des packages communs. Une équipe peut déployer sans attendre — ni casser — les autres.", "note": "L'application est construite à partir de mini-applis séparées — classe, devoirs, récompenses — que chaque équipe livre à son propre rythme. Un kit de design partagé les fait toutes ressembler et fonctionner comme un seul produit." },
+      "quality": { "cat": "Qualité", "diagram": "Barrière qualité en CI", "title": "Des tableaux de bord plus une barrière de tests qui a réduit de moitié les incidents en production", "body": "J'ai construit les tableaux de bord du formateur et de l'élève — quiz, devoirs et retours en temps réel au même endroit — puis j'ai placé un filet de sécurité dessous.\n\nJ'ai ajouté des tests unitaires **Vitest** et des tests end-to-end **Playwright** en CI, si bien qu'une modification ne peut sortir que si elle passe toute la suite et la vérification de types. Cela a réduit les **incidents en production de ~50 %**.", "note": "Chaque modification de code doit passer une checklist automatique — tests unitaires, tests de parcours complet et vérifications de types — avant d'être autorisée à passer en production. Si quoi que ce soit échoue, ça n'atteint jamais les élèves." }
     },
     "avataar": {
       "intro": "Chez Avataar, j'ai construit les outils que les artistes utilisent pour créer des assets 3D de produits — et je les ai rendus rapides.",
-      "tooling": { "title": "Outils de création 3D", "body": "J'ai construit des outils d'animation et de rendu sur Three.js + React Three Fiber qui ont à peu près divisé par deux le temps de création des assets.", "note": "React décide à quoi doit ressembler la scène 3D ; Three.js et le GPU la dessinent." },
-      "perf": { "title": "Performances de rendu et frontend", "body": "Grâce à l'instanciation, la mémoïsation et le lazy loading, j'ai amélioré les performances de rendu et frontend de 40 à 50 %.", "note": "Des rendus moins nombreux et plus intelligents permettent à une scène 3D lourde de rester fluide." },
-      "components": { "title": "Architecture de composants réutilisables", "body": "J'ai composé l'éditeur à partir de petites primitives réutilisables plutôt que de dupliquer la logique entre les fonctionnalités.", "note": "On construit une fois de petites pièces façon Lego, puis on les assemble en fonctionnalités." }
+      "tooling": { "cat": "Outils 3D", "diagram": "Pipeline de rendu", "title": "Outils de création 3D sur Three.js et React Three Fiber", "body": "J'ai construit les outils d'animation et de rendu que les artistes utilisent pour assembler des assets 3D de produits, sur **Three.js + React Three Fiber**.\n\nReact possède l'état de la scène de manière déclarative tandis que Three.js et le GPU gèrent le dessin — une architecture qui a à peu près **divisé par deux le temps de création des assets**.", "note": "React décide à quoi doit ressembler la scène 3D ; Three.js et le GPU la dessinent." },
+      "perf": { "cat": "Performance", "diagram": "Chemin de performance frontend", "title": "Rendu et performances frontend, 40 à 50 % plus rapides", "body": "J'ai gardé les scènes 3D lourdes fluides grâce à l'**instanciation**, une **mémoïsation** agressive et le lazy loading des maillages.\n\nDes appels de dessin moins nombreux et plus intelligents et moins de rendus inutiles ont amélioré les performances de rendu et frontend de **40 à 50 %**.", "note": "Des dessins moins nombreux et plus intelligents permettent à une scène 3D lourde de rester fluide." },
+      "components": { "cat": "Architecture", "diagram": "Composition de composants", "title": "Architecture de composants réutilisables", "body": "J'ai composé l'éditeur à partir de petites **primitives réutilisables** — contrôles, matériaux, widgets de viewport — plutôt que de dupliquer la logique entre les fonctionnalités.\n\nConstruire une pièce une fois, puis assembler les pièces en fonctionnalités, pour que l'éditeur évolue sans copier-coller.", "note": "On construit une fois de petites pièces façon Lego, puis on les assemble en fonctionnalités." }
     },
     "stayflexi": {
       "intro": "Stayflexi gère les hôtels de bout en bout. J'ai travaillé sur son moteur de réservation, son POS et sa plateforme principale à grande échelle.",
-      "bidflexi": { "title": "Moteur de réservation Bidflexi", "body": "J'ai dirigé un moteur dynamique où les clients enchérissent sur les chambres face à des règles de prix en temps réel qui acceptent ou contre-proposent — ouvrant un nouveau canal B2C.", "note": "Les clients proposent leur prix et le système décide instantanément d'accepter ou non." },
-      "pos": { "title": "POS en React Native", "body": "J'ai conçu une application de point de vente multiplateforme à partir d'une seule base de code TypeScript, ouvrant le secteur de la restauration sans équipes iOS et Android séparées.", "note": "Une seule base de code devient à la fois l'application iPhone et l'application Android." },
-      "scale": { "title": "Mis à l'échelle à plus de 1 000 hôtels", "body": "J'ai contribué à mettre à l'échelle les plateformes PMS et OTA à plus de 1 000 hôtels, en gardant l'inventaire synchronisé sur les canaux de réservation.", "note": "Un seul tableau de bord garde les chambres et les prix de mille hôtels corrects partout où ils sont vendus." },
-      "migration": { "title": "Migration de Jython vers Django", "body": "J'ai migré la plateforme de l'ancien Jython vers Django et découpé le code du frontend pour des chargements environ 75 % plus rapides.", "note": "J'ai remplacé un moteur vieillissant par un moderne — sans arrêter la voiture." }
+      "bidflexi": { "cat": "Réservation", "diagram": "Enchère → prix → réservation", "title": "Bidflexi, un moteur de réservation à enchères dynamiques", "body": "J'ai dirigé **Bidflexi**, un moteur dynamique où les clients enchérissent sur les chambres face à des règles de prix en temps réel qui acceptent ou contre-proposent instantanément.\n\nIl a ouvert un nouveau **canal B2C** : les clients proposent leur prix et le système décide en temps réel, augmentant la conversion.", "note": "Les clients proposent leur prix et le système décide instantanément d'accepter ou non." },
+      "pos": { "cat": "Mobile", "diagram": "Une base de code, deux plateformes", "title": "Un POS multiplateforme en React Native", "body": "J'ai conçu une application de **point de vente** multiplateforme à partir d'une seule base de code **TypeScript / React Native**.\n\nUne seule base de code livre à la fois les applications iOS et Android, ouvrant le secteur de la restauration sans équipes natives séparées.", "note": "Une seule base de code devient à la fois l'application iPhone et l'application Android." },
+      "scale": { "cat": "Mise à l'échelle", "diagram": "Synchronisation de l'inventaire", "title": "Mis à l'échelle la plateforme à plus de 1 000 hôtels", "body": "J'ai aidé à mettre à l'échelle les plateformes **PMS et OTA** au-delà de **1 000 hôtels**, en gardant l'inventaire et les prix synchronisés sur chaque canal de réservation.\n\nUn seul tableau de bord garde les chambres et les tarifs de mille hôtels corrects partout où ils sont vendus, avec une haute disponibilité.", "note": "Un seul tableau de bord garde les chambres et les prix de mille hôtels corrects partout où ils sont vendus." },
+      "migration": { "cat": "Migration", "diagram": "Migration de stack", "title": "Migration Jython → Django, frontend 75 % plus rapide", "body": "J'ai migré la plateforme de l'ancien **Jython** vers **Django**, puis j'ai découpé le code du frontend.\n\nLe résultat : une stack moderne et modulaire avec des chargements frontend **~75 % plus rapides** — remplacée sans arrêter la voiture.", "note": "J'ai remplacé un moteur vieillissant par un moderne — sans arrêter la voiture." }
     }
   }
 }

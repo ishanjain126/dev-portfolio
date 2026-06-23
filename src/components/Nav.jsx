@@ -1,24 +1,28 @@
-import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
-import Icon from '../lib/icons.jsx'
 
-export default function Nav({ onHome, onContact, onPalette }) {
-  const { t } = useTranslation()
+const COMPANIES = [
+  { id: 'bhanzu', label: 'Bhanzu' },
+  { id: 'avataar', label: 'Avataar' },
+  { id: 'stayflexi', label: 'Stayflexi' },
+]
+
+export default function Nav({ onHome, onOpen, onPalette, onContact }) {
+  const [mac, setMac] = useState(true)
+  useEffect(() => {
+    setMac(/Mac|iPhone|iPad|iPod/.test((navigator.platform || '') + ' ' + (navigator.userAgent || '')))
+  }, [])
   return (
-    <header className="nav">
-      <button className="brand" onClick={onHome}>
-        <span className="brand-dot" />
-        <span className="brand-name">Ishan Jain</span>
-        <span className="brand-role">{t('hero.role')}</span>
-      </button>
-      <nav className="nav-actions">
-        <button className="palette-trigger" onClick={onPalette} title="Commands">
-          <Icon name="Command" size={14} />
-          <span>{t('palette.open')}</span>
-        </button>
+    <nav className="nav"><div className="wrap">
+      <button className="brand" onClick={onHome}><span className="dot" /> Ishan Jain</button>
+      <div className="right">
+        {COMPANIES.map((c) => (
+          <button key={c.id} className="ghost hide-sm" onClick={() => onOpen(c.id)}>{c.label}</button>
+        ))}
+        <button className="cmdk-hint hide-sm" type="button" onClick={onPalette} aria-label="Open command palette">{mac ? '⌘K' : 'Ctrl K'}</button>
         <LanguageSwitcher />
-        <button className="nav-contact" onClick={onContact}>{t('nav.contact')}</button>
-      </nav>
-    </header>
+        <button className="ghost" type="button" onClick={onContact}>Contact</button>
+      </div>
+    </div></nav>
   )
 }

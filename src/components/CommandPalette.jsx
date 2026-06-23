@@ -1,65 +1,69 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
-import profile from '../data/profile.json'
-import Icon from '../lib/icons.jsx'
 
 export default function CommandPalette({ open, setOpen, onNavigate, onChat }) {
-  const { t } = useTranslation()
   const [q, setQ] = useState('')
   const [sel, setSel] = useState(0)
   const inputRef = useRef(null)
 
-  const commands = useMemo(() => [
-    { id: 'home', icon: 'Command', label: t('palette.home'), run: () => onNavigate('/') },
-    { id: 'bhanzu', icon: 'Boxes', label: t('palette.bhanzu'), run: () => onNavigate('/case/bhanzu') },
-    { id: 'avataar', icon: 'Box', label: t('palette.avataar'), run: () => onNavigate('/case/avataar') },
-    { id: 'stayflexi', icon: 'Building2', label: t('palette.stayflexi'), run: () => onNavigate('/case/stayflexi') },
-    { id: 'chat', icon: 'MessageCircle', label: t('palette.chat'), run: () => onChat() },
-    { id: 'email', icon: 'Mail', label: t('palette.email'), run: () => navigator.clipboard && navigator.clipboard.writeText(profile.contact.email) },
-    { id: 'linkedin', icon: 'Linkedin', label: t('palette.linkedin'), run: () => window.open(profile.contact.linkedin, '_blank') },
-    { id: 'github', icon: 'Github', label: t('palette.github'), run: () => window.open(profile.contact.github, '_blank') },
-  ], [t, onNavigate, onChat])
+  const cmds = useMemo(() => [
+    { t: 'Open Bhanzu case study', h: 'experience', ic: 'i-puzzle', run: () => onNavigate('/case/bhanzu') },
+    { t: 'Open Avataar.ai case study', h: 'experience', ic: 'i-cube', run: () => onNavigate('/case/avataar') },
+    { t: 'Open Stayflexi case study', h: 'experience', ic: 'i-hotel', run: () => onNavigate('/case/stayflexi') },
+    { t: 'Go home', h: 'overview', ic: 'i-shell', run: () => onNavigate('/') },
+    { t: 'Ask the AI about Ishan', h: 'assistant', ic: 'i-ai', run: () => onChat() },
+    { t: 'Email Ishan', h: 'jain.ishan126@gmail.com', ic: 'i-doc', run: () => { location.href = 'mailto:jain.ishan126@gmail.com' } },
+    { t: 'Call Ishan', h: '+91 99826 59449', ic: 'i-mobile', run: () => { location.href = 'tel:+919982659449' } },
+    { t: 'Open LinkedIn', h: 'profile', ic: 'i-user', run: () => window.open('https://www.linkedin.com/in/ishan-jain-b10a77147/', '_blank') },
+    { t: 'Open GitHub', h: 'profile', ic: 'i-code', run: () => window.open('https://github.com/ishanjain126', '_blank') },
+  ], [onNavigate, onChat])
 
-  const filtered = commands.filter((c) => c.label.toLowerCase().includes(q.toLowerCase()))
+  const filtered = useMemo(() => {
+    const s = q.toLowerCase().trim()
+    return cmds.filter((c) => (c.t + ' ' + c.h).toLowerCase().includes(s))
+  }, [q, cmds])
 
   useEffect(() => {
-    const onKey = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setOpen((o) => !o) }
-      else if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [setOpen])
-
-  useEffect(() => { if (open) { setQ(''); setSel(0); setTimeout(() => inputRef.current && inputRef.current.focus(), 50) } }, [open])
+    if (open) { setQ(''); setSel(0); setTimeout(() => inputRef.current && inputRef.current.focus(), 20) }
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+  useEffect(() => { setSel(0) }, [q])
 
   if (!open) return null
-
-  const run = (c) => { setOpen(false); c.run() }
-  const onKeyDown = (e) => {
-    if (e.key === 'ArrowDown') { e.preventDefault(); setSel((s) => Math.min(s + 1, filtered.length - 1)) }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setSel((s) => Math.max(s - 1, 0)) }
-    else if (e.key === 'Enter' && filtered[sel]) run(filtered[sel])
-  }
+  const exec = (i) => { if (filtered[i]) { setOpen(false); filtered[i].run() } }
 
   return (
-    <div className="palette-overlay" onClick={() => setOpen(false)}>
-      <div className="palette" onClick={(e) => e.stopPropagation()}>
-        <div className="palette-input">
-          <Icon name="Search" size={17} />
-          <input ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); setSel(0) }} onKeyDown={onKeyDown} placeholder={t('palette.placeholder')} />
-        </div>
-        <ul className="palette-list">
+    <div className="palette open" role="dialog" aria-modal="true" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false) }}>
+      <div className="palette-box">
+        <input
+          ref={inputRef}
+          type="text"
+          value={q}
+          placeholder={'Type a command…  try “bhanzu”, “ask”, “email”'}
+          autoComplete="off"
+          onChange={(e) => setQ(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'ArrowDown') { e.preventDefault(); setSel((s) => Math.min(s + 1, filtered.length - 1)) }
+            else if (e.key === 'ArrowUp') { e.preventDefault(); setSel((s) => Math.max(s - 1, 0)) }
+            else if (e.key === 'Enter') { e.preventDefault(); exec(sel) }
+            else if (e.key === 'Escape') setOpen(false)
+          }}
+        />
+        <div className="palette-list">
           {filtered.map((c, i) => (
-            <li key={c.id}>
-              <button className={'pitem' + (i === sel ? ' sel' : '')} onMouseEnter={() => setSel(i)} onClick={() => run(c)}>
-                <Icon name={c.icon} size={16} /> <span>{c.label}</span>
-              </button>
-            </li>
+            <div
+              key={c.t}
+              className={'pitem' + (i === sel ? ' sel' : '')}
+              onClick={() => exec(i)}
+              onMouseMove={() => setSel(i)}
+            >
+              <span className="pi-ic"><svg viewBox="0 0 24 24"><use href={'#' + c.ic} /></svg></span>
+              <span className="pi-t">{c.t}</span>
+              <span className="pi-h">{c.h}</span>
+            </div>
           ))}
-          {!filtered.length && <li className="palette-empty">—</li>}
-        </ul>
-        <div className="palette-hint">{t('palette.hint')}</div>
+        </div>
+        <div className="palette-foot"><span>↑↓ navigate</span><span>⏎ select</span><span>esc close</span></div>
       </div>
     </div>
   )

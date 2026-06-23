@@ -2,9 +2,10 @@
   "lang": "English",
   "nav": { "contact": "Contact", "menu": "Menu" },
   "hero": {
-    "status": "Available for senior / full-stack roles",
+    "status": "Real-time systems · currently @ Bhanzu · Bengaluru, IN",
     "role": "Senior Software Engineer",
-    "lede": "I build real-time, full-stack and AI-powered products — live-streaming classrooms, collaborative whiteboards, 3D tooling and LLM features — across edtech, SaaS and hospitality."
+    "roleSuffix": "React systems · full-stack · real-time & AI",
+    "lede": "I build the things people don't notice until they break: live-streaming classrooms, collaborative whiteboards, 3D tooling, and LLM-powered features — across edtech, SaaS, and hospitality, for 5+ years."
   },
   "eq": {
     "hint": "move across it · click to pulse",
@@ -13,6 +14,28 @@
     "allow": "Allow mic…",
     "blocked": "Mic blocked",
     "unavailable": "Mic unavailable"
+  },
+  "wb": {
+    "you": "Your board",
+    "peer": "Peer board",
+    "hint": "Draw on the left — it mirrors to the peer after a short network hop",
+    "clear": "Clear",
+    "how": "Wanna know how it worked?"
+  },
+  "ws": {
+    "title": "What's a WebSocket — and how does it connect?",
+    "lead": "A normal web request is one-and-done: the browser asks, the server answers, the line closes. A WebSocket keeps the line open both ways, so either side can send a message at any moment without asking again.",
+    "step1": "Your browser sends a normal HTTPS request asking to upgrade the connection to a WebSocket.",
+    "step2": "The server agrees, the protocol switches, and the connection stays open instead of closing.",
+    "step3": "Now either side can push messages instantly — so a pen stroke lands on every screen in milliseconds.",
+    "flow": {
+      "you": "Your machine",
+      "youSub": "you draw a stroke",
+      "server": "WebSocket server",
+      "serverSub": "relays the message",
+      "other": "Other machine",
+      "otherSub": "replays the stroke"
+    }
   },
   "sections": {
     "experience": "Experience",
@@ -25,6 +48,18 @@
     "sessions": "Monthly sessions",
     "hotels": "Hotels scaled",
     "cost": "Streaming cost cut"
+  },
+  "sys": {
+    "title": "System check",
+    "desc": "Curious how this page performs? Pop the hood — live runtime metrics, measured in your browser right now.",
+    "cta": "Run check",
+    "foot": "measured client-side · nothing leaves your browser",
+    "render": { "k": "Render path", "v": "React 18 · concurrent", "d": "Components stream in and hydrate without blocking the main thread." },
+    "memory": { "k": "JS heap", "v": "lean", "d": "Lazy chunks and clean unmounts keep memory flat between routes." },
+    "network": { "k": "Transfer", "v": "code-split", "d": "Three.js and the chat widget load in their own chunks, on demand." },
+    "paint": { "k": "Paint", "v": "no layout shift", "d": "Fixed dimensions and a capped pixel ratio avoid reflow and CLS." },
+    "frame": { "k": "Frame rate", "v": "— fps", "d": "Animations run on requestAnimationFrame and pause under reduced-motion." },
+    "a11y": { "k": "Accessibility", "v": "AA-minded", "d": "Focus states, reduced-motion and full RTL are first-class here." }
   },
   "companies": {
     "bhanzu": { "role": "Software Engineer 3 · Full Stack", "summary": "Architected a proprietary live-streaming classroom, a real-time collaborative whiteboard, RAG-powered learning features and the microfrontend platform behind them." },
@@ -39,20 +74,23 @@
     "cloud": "Cloud & DevOps"
   },
   "projects": {
-    "shrohi": { "tagline": "Solo build · live in production", "desc": "A serverless ecommerce admin panel for a boutique, built and shipped end-to-end on AWS." }
+    "shrohi": { "tagline": "My SaaS for boutiques · live & scaling", "desc": "Shrohi is the all-in-one platform I'm building for fashion boutiques — orders, customers, payments and fully custom workflows in one place, so an MSME runs its entire apparel operation from a single dashboard. Designed, built and shipped solo on AWS serverless; already live with a paying client, with more onboarding." }
   },
   "education": {
     "btech": { "degree": "B.Tech, Computer Science", "school": "NIIT University" }
   },
   "contact": {
-    "eyebrow": "Open to senior, full-stack, real-time & AI roles",
-    "title": "Let's build something that ships.",
+    "eyebrow": "Open to a conversation",
+    "title": "Let's build something real-time.",
     "sub": "The fastest way to reach me is email — I usually reply within a day."
   },
   "chat": {
-    "title": "Ask about Ishan",
-    "open": "Ask AI",
+    "title": "Nexus",
+    "open": "Ask Nexus",
     "greeting": "Hi! Ask me anything about Ishan's work, stack, or experience.",
+    "online": "online · powered by Claude",
+    "offline": "offline · answering from local data",
+    "fallback": "I can tell you about Ishan's work at Bhanzu, Avataar.ai or Stayflexi, his Shrohi SaaS, his stack, or how to reach him — try one of those, or email jain.ishan126@gmail.com.",
     "placeholder": "Ask anything about Ishan…",
     "s1": "What does he do at Bhanzu?",
     "s2": "Is he open to roles?",
@@ -76,26 +114,26 @@
     "next": "Next role",
     "plain": "In plain terms",
     "bhanzu": {
-      "intro": "Bhanzu's live classroom serves 50,000+ sessions a month. Here's the real-time infrastructure I built underneath it.",
-      "streaming": { "title": "Live classroom that replaced Zoom", "body": "I replaced Zoom with a proprietary classroom on Amazon IVS — capturing video in the browser, compressing it into adaptive quality levels and delivering it at sub-second latency, cutting streaming cost ~50% across 50,000+ monthly sessions.", "note": "Like a TV station that automatically sends a lighter picture when your internet is slow, so class never freezes." },
-      "whiteboard": { "title": "Real-time collaborative whiteboard", "body": "Every pen stroke becomes a tiny event broadcast over WebSockets and replayed on every screen, with an event log so latecomers can rebuild the board — lifting engagement ~30%.", "note": "The teacher writes once and it appears on every student's screen at the same moment." },
-      "backend": { "title": "Layered Python backend", "body": "I built the backend in Python, Flask and DynamoDB on a strict route → service → repository architecture, with access-pattern-first single-table design for fast reads at scale.", "note": "Every request passes through clean layers, so the code stays easy to change as the product grows." },
-      "rag": { "title": "RAG-grounded AI features", "body": "Lesson summaries, adaptive quizzes and student feedback are grounded with Retrieval-Augmented Generation, so answers come from the real curriculum instead of the model's memory.", "note": "The AI reads the actual lesson before answering, so it doesn't make things up." },
-      "microfrontend": { "title": "Microfrontend platform", "body": "A host shell loads independently-deployed remotes — classroom, assignments, gamification — unified by a shared Storybook design system, so teams ship without colliding.", "note": "Different teams build different parts of the app and release them on their own schedule." },
-      "quality": { "title": "Testing that guards releases", "body": "Vitest unit tests and Playwright end-to-end tests run in CI, so a change can't ship unless it passes — cutting production issues ~50%.", "note": "Robots click through the app before every release to catch bugs before users do." }
+      "intro": "Bhanzu teaches math live to students at scale. My work sits where real-time media, backend services and AI meet: keep thousands of concurrent classrooms streaming smoothly, make the room genuinely interactive, and weave LLMs into the learning loop — all on infrastructure we own rather than rent.",
+      "streaming": { "cat": "Real-time media", "diagram": "Live streaming pipeline", "title": "A proprietary live-streaming platform that replaced Zoom", "body": "I architected the live classroom on **Amazon IVS**, moving off per-seat Zoom licensing onto usage-based streaming we control end to end. The trainer's camera and mic are captured in-browser, transcoded by IVS into an adaptive-bitrate ladder, and delivered through the edge at sub-second latency.\n\nThe hard parts live at the edges: token-based joins, reconnection with backoff, and **adaptive bitrate** so weak connections degrade gracefully. The payoff was **~50% lower streaming spend**.", "note": "The teacher's video is captured in the browser, compressed into several quality levels, and sent through Amazon's network — so each student automatically gets the smoothest version their connection can handle. Like Netflix, but live." },
+      "whiteboard": { "cat": "Real-time collab", "diagram": "Event-driven sync over WebSockets", "title": "A collaborative whiteboard that stays in sync, stroke by stroke", "body": "I built a multi-user whiteboard on the **Canvas API** where every stroke becomes an **event broadcast over WebSockets**. A central hub fans each event to all peers, which re-apply it — so everyone sees the same board instantly.\n\nIt's modeled as an **event stream**, not a shared image: events are logged, so a late joiner replays history to rebuild the exact board. The interactivity drove **~30% higher engagement**.", "note": "When the teacher draws, that single action is sent as a tiny message to a central hub, which instantly copies it onto every student's board. Every action is also saved — so anyone who joins late watches the full board rebuild itself." },
+      "backend": { "cat": "Backend", "diagram": "Request path · layered architecture", "title": "Layered backend services on Python, Flask & DynamoDB", "body": "I own backend services on a **strict layered architecture** — route, then service, then repository — so logic stays testable and the data layer can be swapped without touching the rules above it.\n\nData lives in **DynamoDB with single-table, access-pattern-first design**, keeping reads single-digit-millisecond at scale. On top run REST APIs for student workflows, assignments, and a gamification engine.", "note": "A request flows through clean, separated layers — one checks who you are, one runs the rules, one talks to the database. Because they're separate, any layer can be changed or tested without breaking the others." },
+      "rag": { "cat": "Applied AI", "diagram": "RAG pipeline", "title": "LLM features grounded in the real curriculum with RAG", "body": "I wired LLMs into the learning loop — **summarizing lessons**, **generating adaptive quizzes**, and giving **targeted feedback** — with careful prompt engineering.\n\nWhat makes it trustworthy is **Retrieval-Augmented Generation**. Course content is indexed into a vector store; at question time the relevant passages are retrieved and composed into the prompt, so the model answers **from real material**, not from memory.", "note": "Instead of trusting the AI to remember the syllabus, we first find the exact lesson pages that match the question, hand only those to the model, and ask it to answer from them — so replies stay accurate and on-topic." },
+      "microfrontend": { "cat": "Frontend architecture", "diagram": "Host shell · module federation", "title": "A microfrontend platform teams can ship independently", "body": "I structured the frontend as **microfrontends**: a host shell that owns routing, layout and auth, loading independently-built remotes at runtime via **module federation**. Classroom, assignments and gamification each live in their own repo with their own CI/CD.\n\nThey still feel like one product because they share a single **design system** and common packages. A team can deploy without waiting on — or breaking — the others.", "note": "The app is built from separate mini-apps — classroom, assignments, rewards — that each team ships on its own schedule. A shared design kit keeps them all looking and feeling like one product." },
+      "quality": { "cat": "Quality", "diagram": "CI quality gate", "title": "Dashboards plus a test gate that halved production issues", "body": "I built the trainer and student dashboards — quizzes, assignments and real-time feedback in one place — then put a safety net under them.\n\nI added **Vitest** unit tests and **Playwright** end-to-end tests to CI, so a change can't ship unless it passes the full suite and the type check. That cut **production issues ~50%**.", "note": "Every code change has to pass an automatic checklist — unit tests, full click-through tests, and type checks — before it's allowed to go live. If anything fails, it never reaches students." }
     },
     "avataar": {
-      "intro": "At Avataar I built the tools artists use to create 3D product assets — and made them fast.",
-      "tooling": { "title": "3D creation tooling", "body": "I built animation and rendering tools on Three.js + React Three Fiber that roughly halved asset-creation time.", "note": "React decides what the 3D scene should look like; Three.js and the GPU draw it." },
-      "perf": { "title": "Render & frontend performance", "body": "Through instancing, memoization and lazy loading I improved rendering and frontend performance 40–50%.", "note": "Fewer, smarter draws mean a heavy 3D scene still feels smooth." },
-      "components": { "title": "Reusable component architecture", "body": "I composed the editor from small reusable primitives instead of duplicating logic across features.", "note": "Build small Lego-like pieces once, then snap them together into features." }
+      "intro": "Avataar turns products into interactive 3D. I worked on the artist-facing tooling that creates and renders those assets — making a heavy, GPU-bound workflow feel fast and predictable to the people using it every day.",
+      "tooling": { "cat": "3D tooling", "diagram": "Declarative render pipeline", "title": "3D animation & rendering tooling that halved asset time", "body": "I built artist-facing 3D tooling on **Three.js**, driven declaratively through **React Three Fiber**. Scene state lives in React; the reconciler diffs it into the Three.js scene graph — so updates are predictable instead of imperative WebGL calls.\n\nBy streamlining the create → preview → export loop, I cut the time to produce a render-ready asset by **~50%**.", "note": "Artists describe a 3D scene in simple React code, and the tool translates that step by step into instructions the graphics card can draw — turning a slow, manual process into an automatic one." },
+      "perf": { "cat": "Performance", "diagram": "Frame cost · before vs after", "title": "Render pipelines and frontend, 40–50% faster", "body": "I profiled the render loop and attacked the real costs: **geometry instancing** to batch draw calls, memoized scene graphs, fewer re-renders, and lazy asset loading so the viewport stays responsive while heavy meshes stream in.\n\nTogether those changes improved performance and scalability by **40–50%**.", "note": "By reusing shapes, avoiding repeated work, and loading heavy assets only when needed, each frame became far cheaper to draw — so the tool stays smooth even on big scenes." },
+      "components": { "cat": "Architecture", "diagram": "Primitives compose into features", "title": "A reusable component architecture for velocity", "body": "I designed a **reusable component architecture** so common 3D and UI primitives — controls, materials, loaders — are composed rather than copy-pasted.\n\nFeatures assemble from trusted building blocks, raising developer velocity and keeping the codebase maintainable as it grew.", "note": "Small reusable building blocks — controls, materials, loaders — snap together into bigger features, so new tools get assembled instead of rebuilt from scratch." }
     },
     "stayflexi": {
-      "intro": "Stayflexi runs hotels end-to-end. I worked across its booking engine, POS and core platform at scale.",
-      "bidflexi": { "title": "Bidflexi booking engine", "body": "I led a dynamic engine where guests bid on rooms against live pricing rules that accept or counter — opening a new B2C channel.", "note": "Guests name their price and the system instantly decides whether to say yes." },
-      "pos": { "title": "React Native POS", "body": "I architected a cross-platform point-of-sale app from one TypeScript codebase, opening the restaurant vertical without separate iOS and Android teams.", "note": "One codebase becomes both the iPhone and the Android app." },
-      "scale": { "title": "Scaled to 1,000+ hotels", "body": "I helped scale the PMS and OTA platforms to over 1,000 hotels, keeping inventory in sync across booking channels.", "note": "One dashboard keeps a thousand hotels' rooms and prices correct everywhere they're sold." },
-      "migration": { "title": "Jython → Django migration", "body": "I migrated the platform off legacy Jython onto Django and code-split the frontend for ~75% faster loads.", "note": "Swapped an aging engine for a modern one — without stopping the car." }
+      "intro": "Stayflexi runs the software hotels live in — property management, distribution to booking channels, and point of sale. Over three years I worked across that whole surface: a new revenue product, a new vertical, a scaling push, and a platform migration off legacy tech.",
+      "bidflexi": { "cat": "Growth", "diagram": "Bid → price → book", "title": "Bidflexi — a dynamic booking engine that lifted conversion", "body": "I led **Bidflexi**, where guests bid on rooms against a dynamic pricing engine instead of a fixed rate. A bid runs through pricing rules and live inventory, which accepts it or returns a counter — then confirms the booking.\n\nIt opened a new **B2C growth channel** and gave price-sensitive guests a reason to convert.", "note": "A guest offers a price, the system checks it against live pricing rules and available rooms, then either accepts it or sends back a counter-offer — turning browsers into bookings." },
+      "pos": { "cat": "New vertical", "diagram": "Single codebase · two platforms", "title": "A React Native POS that opened the restaurant business", "body": "I architected a cross-platform **point-of-sale app in React Native**, extending Stayflexi from rooms into food & beverage on a single shared codebase. Logic is written once in TypeScript; the bridge renders real native iOS and Android components.\n\nHotels could run restaurants on the same platform as their rooms — a new vertical without two native teams.", "note": "One app, written once, runs as a real native app on both iPhone and Android — so hotels could start taking restaurant orders without building two separate apps." },
+      "scale": { "cat": "Scale", "diagram": "Hub-and-spoke distribution", "title": "PMS & OTA platforms scaled to 1,000+ hotels", "body": "I scaled the property-management and OTA-distribution platforms to **1,000+ hotels globally**. At that size, distribution is the hard problem: rates and inventory must stay consistent across many booking channels in near real time.\n\nThe platform is the hub — hotels push inventory in, and a channel manager fans rates out to every OTA, syncing bookings back.", "note": "The platform is the central hub — every hotel's rooms and rates flow in, and it keeps them in sync across all the big booking sites in near real time, for 1,000+ hotels at once." },
+      "migration": { "cat": "Modernization", "diagram": "Runtime migration + code splitting", "title": "Migrated off legacy Jython, and made the frontend 75% faster", "body": "I migrated the platform from **Jython to Django**, trading a dead-end runtime for a maintainable, modular architecture.\n\nIn parallel I refactored the frontend — **code splitting** the single bundle into route-level chunks, plus optimized state — for roughly **75% better performance**.", "note": "I moved the system off an old, unsupported engine onto a modern one, and split the website into smaller pieces that load on demand — so it stays maintainable and loads much faster." }
     }
   }
 }
